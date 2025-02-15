@@ -6,4 +6,4 @@ const authorSchema = new Schema({
   age: String
 })
 
-module.exports = mongoose.model('Book', authorSchema)
+module.exports = mongoose.model('Author', authorSchema)
