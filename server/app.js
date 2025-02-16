@@ -5,10 +5,14 @@ const express = require('express')
 const { graphqlHTTP } = require('express-graphql')
 const schema = require('./schema/schema')
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 // To create an Express application instance by calling express().
 // The app object that is created is used to configure your routes, middlewares, and server behavior.
 const app = express()
+
+// allow cross-origin requests
+app.use(cors())
 
 // connect to mongodb database
 mongoose.connect(
